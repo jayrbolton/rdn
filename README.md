@@ -104,7 +104,7 @@ profile_tags = $tags
 users =
   # $user
     username = 'bobross'
-    ip_address = $ip - 128 - 3 - 66 - 210
+    ip_address = $ip # 128 # 3 # 66 # 210
     login_info = $login_info
       login_count = 10
       last_login = 2018-10-19T23:11:11.244Z
@@ -143,7 +143,7 @@ world
 """
 ```
 
-Minification collapses a document into a single line without whitespace
+All rdn structures can be collapsed into a single line without whitespace:
 
 ```
 // starting with:
@@ -162,7 +162,8 @@ p/r = 5
 x=(y=(#a=1;b=2#c=3)z=4)p=(q=3;r=5)
 ```
 
-Punctuation marks (`/`, `=`, `;`) can be escaped when used inside keys
+Punctuation marks (`/`, `=`, `;`, `$`, `++`, `#`, `'`, `"`), when needed inside keywords, can be escaped by
+either prefixing it with a backslash or surrounding the keyword in quotes 
 
 ## Acknowledgements
 
