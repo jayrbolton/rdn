@@ -304,6 +304,23 @@ response = http_get
 output = response/text
 ```
 
+### Namespaces
+
+_our namespace (defs.rdn)_
+```
+greeting = 'Hello, world.
+```
+
+_our document (hw.rdn)_
+```
+$ref greeting
+```
+
+```sh
+$ rdn eval hw.rdn --ns defs.rdn
+> 'Hello, world.'
+```
+
 ## Acknowledgements
 
 Inspired by: [edn](https://github.com/edn-format/edn), [TOML](https://github.com/toml-lang/toml), and clojure
